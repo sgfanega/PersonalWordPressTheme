@@ -1,0 +1,74 @@
+header {
+    /* ======================== Global Attributes ======================== */
+    position: relative;
+    padding: 1rem;
+    font-family: Calibri;
+
+    /* ========================= Menu Attributes ========================= */
+    .top-menu {
+        // Removes the menu when the size of the screen is too small
+        display: none;
+
+        // Adds the menu when the size is of the screen is big enough
+        // 991px is taken from when the navbar will appear
+        @media screen and (min-width: 992px) {
+            display: flex;          
+        }
+
+        // Remove dots, move items closer to each other, and centering them
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        & li {
+            & a {
+                color: $color1;
+                text-decoration: none;
+                padding: 1rem 5rem 0rem 0rem;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            & a:hover {color: $color2; }
+            &.current-menu-item { a { color: $color2; } }
+            &:last-child {a { padding: 0.25rem 0rem 0rem 0rem; }
+            }
+        }
+    }
+
+    .navbar {
+        .mobile-menu {
+            display: none;
+
+            @media screen and (max-width: 991px) {
+                display: block;
+            }
+
+            list-style-type: none;
+            margin: 0;
+            padding: 0.25rem;
+            
+            & li {
+                margin: 1em 0rem 1rem 0rem;
+                & a {
+                    color: $color1;
+                    text-decoration: none;
+                    font-size: 1.2rem; 
+                    font-weight: bold;
+                }
+                & a:hover { color: $color2; }
+                &.current-menu-item { a { color: $color2; } }
+                &:last-child {a {padding: 0rem 0rem 0rem 0rem; }
+                }
+            }
+        }
+
+        .navbar-toggler {
+            border-color: $color1;
+            background: $color3; 
+
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(254,218,106, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+            }
+        }
+    }
+}

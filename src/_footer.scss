@@ -1,0 +1,16 @@
+.footer {
+    @media screen and (max-width: 375px) {
+        margin: 0em;
+        padding: 0em;
+
+        & .row {
+            flex-wrap: nowrap;
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+    }
+    & .social_media_logo {
+        width: 20px;
+        height: 20px;
+    }
+}
