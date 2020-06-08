@@ -12,7 +12,8 @@
     
     <img src="<?php echo $portrait_image; ?>" alt="Self-Portrait" height="250" width="250">
     <p> <?php echo $about_me_paragraph; ?> </p>
-
+    <br/>
+    <br/>
 </div>
 
 <?php get_footer();?>
