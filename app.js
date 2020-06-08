@@ -18070,8 +18070,8 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\stevefanegaii\wp-content\themes\stevefanegaii\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\stevefanegaii\wp-content\themes\stevefanegaii\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! C:\laragon\www\stevefanegaii\wp-content\themes\stevefanegaii\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\stevefanegaii\wp-content\themes\stevefanegaii\src\app.scss */"./src/app.scss");
 
 
 /***/ })
