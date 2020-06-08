@@ -13,6 +13,12 @@
             "Link" => get_field('second_project_link'),
             "Name" => get_field('second_project_name'),
             "Description" => get_field('second_project_description')
+        ],       
+        [
+            "Language" => get_field('third_project_language'),
+            "Link" => get_field('third_project_link'),
+            "Name" => get_field('third_project_name'),
+            "Description" => get_field('third_project_description')
         ]
     ];
 
@@ -27,51 +33,38 @@
                 return "";
             case "C++":
                 return "";
+            case "Python":
+                return "http://stevefanegaii.test/wp-content/uploads/2020/05/PythonLogo.png";
             default:
                 return "";
         }
     }
 ?>
+
 <?php get_header();?>
 
 <div class="container d-flex main-section">
     <div class="row">
-        <div class="container d-flex project-section">
-            <a href='<?php echo $projects[0]["Link"]; ?>'>
-                <img src='<?php echo getLogo($projects[0]["Language"]); ?>'>
-            </a>
-
-            <div class="row">
-                <div class="col">
-                    <a href='<?php echo $projects[0]["Link"]; ?>'>
-                        <h3><?php echo $projects[0]["Name"]; ?>
-                    </a>
-                </div>
-                <div class="w-100 d-md-block"></div>
-                <div class="col">
-                    <p><?php echo $projects[0]["Description"]; ?>
-                </div>
-            </div>
-        </div>
-
-        <div class="container d-flex project-section">
-            <a href='<?php echo $projects[1]["Link"]; ?>'>
-                <img src='<?php echo getLogo($projects[1]["Language"]); ?>'>
-            </a>
-
-            <div class="row">
-                <div class="col">
-                    <a href='<?php echo $projects[1]["Link"]; ?>'>
-                        <h3><?php echo $projects[1]["Name"]; ?>
-                    </a>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <p><?php echo $projects[1]["Description"]; ?>
-                </div>
-            </div>
-
-        </div>
+    <?php 
+        foreach ($projects as $key => $project) {
+            echo '<div class="container d-flex project-section">';
+            echo '  <a href="' . $project['Link'] .'">';
+            echo '      <img src="' . getLogo($project['Language']) . '">';
+            echo '  </a>';
+            echo '  <div class="row">';
+            echo '      <div class="col">';
+            echo '          <a href="' . $project['Link'] . '">';
+            echo '              <h3>' . $project['Name'] . '</h3>';
+            echo '          </a>';
+            echo '      </div>';
+            echo '      <div class="w-100 d-md-block"></div>';
+            echo '      <div class="col">';
+            echo '          <p>' . $project['Description'] . '</p>';
+            echo '      </div>';
+            echo '  </div>';
+            echo '</div>';
+        }
+    ?>
     </div>
 </div>
 
