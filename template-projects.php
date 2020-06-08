@@ -19,7 +19,13 @@
             "Link" => get_field('third_project_link'),
             "Name" => get_field('third_project_name'),
             "Description" => get_field('third_project_description')
-        ]
+        ],
+        [
+            "Language" => get_field('fourth_project_language'),
+            "Link" => get_field('fourth_project_link'),
+            "Name" => get_field('fourth_project_name'),
+            "Description" => get_field('fourth_project_description')
+        ],
     ];
 
     function getLogo($language) : string 
@@ -28,7 +34,7 @@
             case "C#":
                 return "http://stevefanegaii.test/wp-content/uploads/2020/05/CsharpLogo.png";
             case "PHP":
-                return "http://stevefanegaii.test/wp-content/uploads/2020/05/PhpLogo.png";
+                return "http://stevefanegaii.test/wp-content/uploads/2020/06/PHPLogo.png";
             case "Java":
                 return "";
             case "C++":
